@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product App</title>
+    <link rel="stylesheet" type="text/css" href="product_style.css">
+</head>
+<body>
+    <div class="nav-bar"></div>
+    <div id="app">
+        <!--<input type="range" min="0" max="100" v-model="range_slider_value">
+        <span v-text="slider_value"></span>-->
+        <range-slider></range-slider>
+        <range-slider></range-slider>
+        <div class="cart">
+            <p>Cart {{ cart.length }}</p>
+        </div>
+
+        <product :details="details" :premium="premium" @add-to-cart="updateCart" @remove-from-cart="removeFromCart" @reset-cart="resetCart"></product>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="main.js"></script>
+</body>
+</html>
